@@ -1,0 +1,30 @@
+.Times {
+	border: thin #FFFFFF;
+	text-align:center
+}
+.Times_spit{
+   border-left:0;
+   border-right:0;
+   
+}
+.Times_input[type="text"]{
+   border:0;
+   size:20;
+   width:20px;
+   
+}
+.Times_td{
+   width:40px;
+}
+ table tr{
+   border-collapse:collapse;
+   border-left-width:0;
+   border-right-width:0;
+}
+input[type="text"]{
+  border:0;
+  width:40px;
+  text-align:center;
+}
+
+

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+	
+<hibernate-mapping
+	package="cn.tinder.das.domain.po">
+	<class name="SystemUser">
+	    <id name="userName" column="user_name"  type="java.lang.String" >
+			<generator class="assigned"/>
+		</id>
+		
+		<property name="password" column="password" not-null="true"></property>
+		<property name="department" column="department" ></property>
+		<property name="role" column="role" not-null="true"></property>
+		<property name="gasNum" column="gas_num"  not-null="true"></property>
+		<property name="description" column="description" ></property>
+ 
+	</class>
+</hibernate-mapping>
+ 

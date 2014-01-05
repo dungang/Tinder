@@ -1,0 +1,33 @@
+
+  	body{
+  		margin:0px;
+  		 
+  		padding:0px;
+  		font-size:12px;
+  		background-color:ffffff;
+  		overflow:hidden; 
+  		text-align:center;
+  	}
+  	#container{
+  	 background-color:#2222;
+  	 height:80px;  
+  	 
+  	}
+  	.head_style{
+  	 margin-left:750px;
+  	 margin-top:-56;
+  	 font-size:18;
+  	 color:blue;
+  	}
+  	.head_style ul{
+  	 background-color:#2222;
+  	 
+  	}
+  	.head_style ul li
+  	{
+  	 display:inline;
+  	 float:letf;
+  	}
+  	.head_style ul li a { 
+  	  color: #fff;
+  	}

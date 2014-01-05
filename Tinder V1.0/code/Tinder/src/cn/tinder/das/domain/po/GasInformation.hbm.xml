@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+ 
+<hibernate-mapping
+	package="cn.tinder.das.domain.po">
+	<class name="GasInformation">
+		<composite-id name="index" >
+			<key-property name="yearMonth" column="c_year_month" type="java.lang.String"></key-property>
+			<key-property name="gasName" column="gas_name" type="java.lang.String"></key-property>
+		</composite-id>
+		
+		
+		<component name="saleInfo">
+			<property name="businessHours" column="business_hours" not-null="true"></property>
+			<property name="businessTime" column="business_time" not-null="true"></property>
+			<property name="saleNum" column="sale_num" not-null="true"></property>
+			<property name="saleMoney" column="sale_money" not-null="true"></property>
+			<property name="cardScale" column="card_scale" not-null="true"></property>
+		</component>
+		
+		<component name="staffInfo">
+			<property name="staffNum" column="staff_num" not-null="true"></property>
+			<property name="avgRestStaff" column="avg_rest_staff" not-null="true"></property>
+			<property name="avgRestDay" column="avg_rest_day" not-null="true"></property>
+			<property name="allDayRest" column="all_day_rest" not-null="true"></property>
+		</component>   
+		
+		<component name="gasArrange">
+		    <property name="arrangeName" column="arrange_name" not-null="true" ></property>
+			<component name="aMode" >
+			   <property name="modeName" column="a_mode_name" ></property>
+			   <property name="modeTime" column="a_mode_time" ></property>
+			   <property name="modeHours" column="a_mode_hours" ></property>
+			   <property name="modeAvgNum" column="a_mode_avg_num" ></property>
+			</component>
+			<component name="bMode" >
+			   <property name="modeName" column="b_mode_name"></property>
+			   <property name="modeTime" column="b_mode_time"></property>
+			   <property name="modeHours" column="b_mode_hours"></property>
+			   <property name="modeAvgNum" column="b_mode_avg_num"></property>
+			</component>
+			<component name="cMode" >
+			   <property name="modeName" column="c_mode_name" ></property>
+			   <property name="modeTime" column="c_mode_time" ></property>
+			   <property name="modeHours" column="c_mode_hours" ></property>
+			   <property name="modeAvgNum" column="mode_avg_num" ></property>
+			</component>
+			<component name="dMode" >
+			   <property name="modeName" column="d_mode_name" ></property>
+			   <property name="modeTime" column="d_mode_time" ></property>
+			   <property name="modeHours" column="d_mode_hours" ></property>
+			   <property name="modeAvgNum" column="d_mode_avg_num" ></property>
+			</component>
+			<component name="eMode" >
+			   <property name="modeName" column="e_mode_name" ></property>
+			   <property name="modeTime" column="e_mode_time" ></property>
+			   <property name="modeHours" column="e_mode_hours" ></property>
+			   <property name="modeAvgNum" column="e_mode_avg_num" ></property>
+			</component>
+			<component name="fMode" >
+			   <property name="modeName" column="f_mode_name" ></property>
+			   <property name="modeTime" column="f_mode_time" ></property>
+			   <property name="modeHours" column="f_mode_hours" ></property>
+			   <property name="modeAvgNum" column="f_mode_avg_num" ></property>
+			</component>
+			<component name="gMode" >
+			   <property name="modeName" column="g_mode_name" ></property>
+			   <property name="modeTime" column="g_mode_time" ></property>
+			   <property name="modeHours" column="g_mode_hours" ></property>
+			   <property name="modeAvgNum" column="g_mode_avg_num" ></property>
+			</component>
+			<component name="hMode" >
+			   <property name="modeName" column="h_mode_name" ></property>
+			   <property name="modeTime" column="h_mode_time" ></property>
+			   <property name="modeHours" column="h_mode_hours" ></property>
+			   <property name="modeAvgNum" column="h_mode_avg_num" ></property>
+			</component>
+			<component name="zMode" >
+			   <property name="modeName" column="z_mode_name" ></property>
+			   <property name="modeTime" column="z_mode_time" ></property>
+			   <property name="modeHours" column="z_mode_hours" ></property>
+			   <property name="modeAvgNum" column="z_mode_avg_num" ></property>
+			</component>
+		</component>   
+		<property name="others" column="others" ></property>
+	</class>
+</hibernate-mapping>
+ 

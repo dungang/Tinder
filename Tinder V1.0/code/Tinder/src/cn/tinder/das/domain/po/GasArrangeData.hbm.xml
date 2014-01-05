@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping
+	package="cn.tinder.das.domain.po">
+	<class name="GasArrangeData">
+		<composite-id name="index" >
+			<key-property name="yearMonth" column="c_year_month" type="java.lang.String"></key-property>
+			<key-property name="gasName" column="gas_name" type="java.lang.String"></key-property>
+			<key-property name="staffName" column="staff_name" type="java.lang.String"></key-property>
+		</composite-id>
+
+		<property name="job" column="job" not-null="true"></property>
+		<property name="workDays" column="work_days" ></property>
+		<property name="sumHours" column="sum_hours" ></property>
+		<property name="sumDays" column="sum_days" ></property>
+		<property name="holidays" column="hoidays" ></property>
+		
+		<property name="overHours" column="over_hours" ></property>
+		<property name="restDays" column="rest_days" ></property>
+
+	 	 
+	</class>
+</hibernate-mapping>
+ 

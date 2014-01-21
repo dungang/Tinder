@@ -7,8 +7,6 @@ package cn.tinder.das.service.Impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sun.org.apache.commons.logging.Log;
-import com.sun.org.apache.commons.logging.LogFactory;
 
 import cn.tinder.das.dao.CompanySumInfoDao;
 import cn.tinder.das.dao.GasArrangeDataDao;

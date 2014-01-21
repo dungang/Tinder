@@ -17,8 +17,6 @@ import cn.tinder.das.util.ExceptionStackPrint;
 import cn.tinder.das.util.LoginRole;
 import cn.tinder.das.util.constant.PropertyName;
 
-import com.sun.org.apache.commons.logging.Log;
-import com.sun.org.apache.commons.logging.LogFactory;
 
 public class LoginServiceImpl extends BasicServiceImpl implements LoginService
 {

@@ -15,25 +15,25 @@ import cn.tinder.das.domain.po.SystemUser;
 public interface SystemUserDao
 {
 	/**
-	 * @function Ôö¼ÓÒ»¸öÓÃ»§
+	 * @function å¢åŠ ä¸€ä¸ªç”¨æˆ·
 	 * @param user
 	 */
     public void addSystemUser(SystemUser user);
     
     /**
-     * @function É¾³ıÒ»¸öÓÃ»§
+     * @function åˆ é™¤ä¸€ä¸ªç”¨æˆ·
      * @param user
      */
     public void deleteSystemUser(SystemUser user);
 
     /**
-     * @function ¸üĞÂÒ»¸öÓÃ»§
+     * @function æ›´æ–°ä¸€ä¸ªç”¨æˆ·
      * @param user
      */
     public void updateSystemUser(SystemUser user);
     
     /**
-     * @function Í¨¹ıÓÃ»§Ãû²éÕÒÓÃ»§
+     * @function é€šè¿‡ç”¨æˆ·åæŸ¥æ‰¾ç”¨æˆ·
      * @param username
      * @return SystemUser
      */
@@ -41,7 +41,7 @@ public interface SystemUserDao
 
     /**
      * 
-     * @function Í¨¹ı¾­Óª¹ÜÀí²¿ÕÒÓÍÕ¾Àà±í
+     * @function é€šè¿‡ç»è¥ç®¡ç†éƒ¨æ‰¾æ²¹ç«™ç±»è¡¨
      * @param department
      * @return
      */
@@ -49,7 +49,7 @@ public interface SystemUserDao
     
     /**
      * 
-     * @function Í¨¹ı½ÇÉ«ÕÒÓÃ»§ÁĞ±í
+     * @function é€šè¿‡è§’è‰²æ‰¾ç”¨æˆ·åˆ—è¡¨
      * @param role
      * @return
      */

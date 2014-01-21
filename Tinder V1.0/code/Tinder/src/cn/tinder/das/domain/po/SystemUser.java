@@ -3,7 +3,7 @@ package cn.tinder.das.domain.po;
 /**
  * 
  * @author Administrator
- * 用户信息
+ * 鐢ㄦ埛淇℃伅
  */
 public class SystemUser 
 {

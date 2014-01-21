@@ -3,16 +3,16 @@ package cn.tinder.das.domain.dependency;
 /**
  * 
  * @author Administrator
- * 加油站的营业情况
+ * 鍔犳补绔欑殑钀ヤ笟鎯呭喌
  */
 public class GasSaleInfo
 {
-    private int businessHours;  //营业时间
-    private String businessTime; //营业时段
+    private int businessHours;  //钀ヤ笟鏃堕棿
+    private String businessTime; //钀ヤ笟鏃舵
     
-    private int saleNum;    //销售量
-    private int saleMoney;  //销售额
-    private int cardScale;  //持卡比例
+    private int saleNum;    //閿�鍞噺
+    private int saleMoney;  //閿�鍞
+    private int cardScale;  //鎸佸崱姣斾緥
     public int getBusinessHours()
     {
         return businessHours;

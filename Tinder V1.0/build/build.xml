@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="build" basedir=".">
+ <!-- ========== 步骤1、主要的系统环境属性 =========== -->
+
+ <property file="build.properties"/>
+ 
+ <property name="version.id" value="${version_id}" />
+
+ <property name="src.dir" value="${project_src_path}" />
+ <property name="web.dir" value="${project_web_path}" />
+
+ <property name="web.lib.dir" value="${webserver_jar_path}" />
+ <property name="build.lib" value="${3rd_path}" />
+ <property name="build.classes" value="${class_path}" />
+ 
+ <property name="build.app.path" value="${webapp_path}" />
+ <property name="build.jar.dir" value="${jar_path}" />
+ <property name="build.jar.name" value="${jar_path}/${jar_name}" />
+ 
+
+ <property name="build.webapp.dir" value="${webapp_path}" />
+ <property name="build.webapp" value="${build.webapp.dir}/.." />
+ 
+ <property name="package.dir" value="${release_path}" />
+ <property name="package.name" value="${release_name}${version.id}.zip" />
+
+
+ <!-- 定义一个全局的classpath提供给其他在javac或java时使用 -->
+ <path id="classpath">
+  <pathelement location="${build.classes}" />
+    <fileset dir="${build.lib}"><!--4-->
+           <include name="**/*.jar"/> 
+     </fileset> 
+	 
+	 <fileset dir="${web.lib.dir}"><!--4-->
+           <include name="**/*.jar"/> 
+     </fileset> 
+ </path>
+
+  <target name="build" depends="init" description="-> 编译">
+    <antcall target="compile"/>
+	<antcall target="jars"/>
+	<antcall target="package"/>
+	<antcall target="compile"/>
+	
+ </target>
+
+ <!-- ========= 步骤2、任务 -->
+ <target name="init" description="初始化：清理以前的目录并准备目录环境">
+  <delete dir="${build.classes}" failonerror="false" />
+  <delete dir="${build.jar.dir}" failonerror="false" />
+ 
+  <!-- 准备目录 -->
+  <mkdir dir="${build.classes}" />
+  <mkdir dir="${build.jar.dir}" />
+ 
+ </target>
+
+ <target name="compile"  description="-> 编译">
+  <javac srcdir="${src.dir}" destdir="${build.classes}" encoding="utf-8">
+   <classpath refid="classpath" />
+  </javac>
+ </target>
+
+ <target name="jars" description="-> 应用程序打包：包名是应用程序名称.jar">
+  <jar basedir="${build.classes}"
+   jarfile="${build.jar.name}" >
+   <fileset dir="${src.dir}"
+			excludes="**/*.java"
+             >
+   </fileset>
+   </jar>
+ </target>
+
+  
+
+ <target name="package" >
+  <!-- copy bin 执行文件 -->
+  <copy todir="${build.webapp.dir}">
+   <fileset dir="${web.dir}/" />
+  </copy>
+  
+   <zip destfile="${package.dir}/${package.name}">
+            <fileset dir="${build.webapp}">
+              
+            </fileset>
+        </zip>
+
+</target>
+
+ <target name="junitreport">
+  <junit printsummary="true" failureproperty="tests.failed">
+   <test name="main.hello.ant.TestHelloAnt" />
+   <classpath>
+    <pathelement location="${build.classes}" />
+   </classpath>
+  </junit>
+  <junitreport todir="${report}">
+   <fileset dir="${report}">
+    <include name="TEST-*.xml" />
+   </fileset>
+   <report format="frames" todir="${report}" />
+  </junitreport>
+
+  <fail if="tests.failed">--fail!--</fail>
+ </target>
+
+ 
+
+</project>

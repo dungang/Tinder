@@ -12,23 +12,23 @@ public class LoginServiceImplTest {
 	
 	
 	LoginService testLS=new LoginServiceImpl();
-	UserForm user1 =new UserForm("²âÊÔÓÃ»§Ãû","123456");
+	UserForm user1 =new UserForm("æµ‹è¯•ç”¨æˆ·å","123456");
 	
 	
-	//µÇÂ¼²âÊÔ
+	//ç™»å½•æµ‹è¯•
 	
 	public void Logintest(){
 		System.out.println(testLS.login(user1).getRole()); 
 
 	}
-	//¾­Óª¹ÜÀí²¿±ä¶¯Ë¢ĞÂ
+	//ç»è¥ç®¡ç†éƒ¨å˜åŠ¨åˆ·æ–°
 	public void DPfrashtest(){
 
 		//System.out.println(testLS.selectDepartment("test").DepartmentList);
 		//System.out.println(testLS.selectDepartment("test").GasStationList);
 	}
 
-	//½ÇÉ«Ñ¡Ôñ
+	//è§’è‰²é€‰æ‹©
 	@Test
 	public void Rolechoose(){
 		

@@ -5,7 +5,7 @@ import cn.tinder.das.domain.dependency.GasDataIndex;
 /**
  * 
  * @author Administrator
- * ¹«Ë¾»ã×ÜĞÅÏ¢£¬Ö÷ÒªÊÇ´æÃ¿ÌìĞİ¼ÙµÄÈËÊı¡£
+ * å…¬å¸æ±‡æ€»ä¿¡æ¯ï¼Œä¸»è¦æ˜¯å­˜æ¯å¤©ä¼‘å‡çš„äººæ•°ã€‚
  */
 public class CompanySumInfo
 {

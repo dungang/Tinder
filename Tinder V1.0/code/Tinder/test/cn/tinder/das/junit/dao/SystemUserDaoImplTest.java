@@ -4,7 +4,7 @@ import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
-import cn.tinder.das.dao.SystemUserDao;
+import cn.fuego.tinder.dao.SystemUserDao;
 import cn.tinder.das.dao.impl.SystemUserDaoImpl;
 import cn.tinder.das.domain.po.SystemUser;
 
@@ -63,7 +63,7 @@ public class SystemUserDaoImplTest
     public void testgetSystemUserByName()
     {
         SystemUser user = new SystemUser();
-        user = userDao.getSystemUserByName("admin");
+        user = ((SystemUserDaoImpl) userDao).getSystemUserByName("admin");
         System.out.println(user.getRole());
         if(user.getPassword().equals("1234"))
         {
